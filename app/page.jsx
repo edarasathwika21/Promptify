@@ -7,7 +7,7 @@ const Home=()=> {
 <h1 className="head_text text-center">
   Discover & Share
   <br className="max-md:hidden"/>
-  <span className="orange_gradient">
+  <span className="blue_gradient">
     AI-Powered Prompts
   </span>
 
