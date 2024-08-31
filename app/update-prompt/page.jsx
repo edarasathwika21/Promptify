@@ -5,7 +5,7 @@ import {useState,useEffect} from 'react'
 import Form from '@components/Form'
 
 
- const EditPrompt=()=> {
+ const UpdatePrompt=()=> {
   const router=useRouter()
   const searchParams=useSearchParams()
   const promptId=searchParams.get("id")
@@ -75,5 +75,14 @@ if(!promptId)
     />
   )
 }
+
+const EditPrompt = () => {
+	return (
+		<Suspense>
+			<UpdatePrompt />
+		</Suspense>
+	);
+};
+
 
 export default EditPrompt
