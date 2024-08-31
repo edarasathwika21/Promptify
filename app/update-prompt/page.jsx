@@ -8,7 +8,7 @@ import Form from '@components/Form'
  const EditPrompt=()=> {
   const router=useRouter()
   const searchParams=useSearchParams()
-  const promptId=searchParams.get('id')
+  const promptId=searchParams.get("id")
 
     const [submitting,setSubmitting]=useState(false);
     const[post,setPost]=useState({
@@ -44,6 +44,9 @@ if(!promptId)
       try{
         const response=await fetch(`/api/prompt/${promptId}`,{
           method:'PATCH',
+          headers: {
+            'Content-Type': 'application/json', // Indicate JSON data
+          },
           body:JSON.stringify({
             prompt:post.prompt,
             tag:post.tag
