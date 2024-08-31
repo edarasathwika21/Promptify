@@ -1,7 +1,7 @@
 'use client'
 
-import { useRouter, useSearchParams } from 'next/navigation'
-import {useState,useEffect} from 'react'
+import { useRouter, useSearchParams} from 'next/navigation'
+import {useState,useEffect,Suspense} from 'react'
 import Form from '@components/Form'
 
 
